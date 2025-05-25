@@ -398,8 +398,8 @@
   color:white;
   border-radius: 10px;
   font-weight: 500;
-  margin-top: 1.5rem;
-  margin-right: 3.5rem;
+  /* margin-top: 1.5rem; */
+  margin-right: 2rem;
 }
 .Schedule:hover{
   background-color: #000000;
