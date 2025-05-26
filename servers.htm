@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Timeline Animation</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: #fff;
+      color: #111;
+    }
+
+    .approach-section {
+      max-width: 1200px;
+      margin: auto;
+      padding: 60px 20px;
+      position: relative;
+    }
+
+    .approach-section h2,
+    .approach-section p {
+      text-align: left;
+    }
+
+    .approach-section h2 {
+      font-size: 2.5rem;
+      color: #f9a826;
+      text-align: center;
+    }
+
+    .timeline {
+      position: relative;
+      margin: 0 auto;
+      padding: 40px 0;
+    }
+
+    .timeline::before {
+      content: "";
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 4px;
+      height: 0;
+      background: #ffd369;
+      z-index: -1;
+      transition: height 1s ease-in-out;
+    }
+
+    .timeline.animate-line::before {
+      height: 100%;
+    }
+
+    .timeline-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 80px;
+      position: relative;
+      opacity: 0;
+      transform: translateY(50px);
+      transition: all 0.6s ease;
+    }
+
+    .timeline-item.active {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .timeline-item:nth-child(even) {
+      flex-direction: row-reverse;
+    }
+
+    .timeline-item .content-box {
+      background: #fff;
+      padding: 30px;
+      width: 40%;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+      border-radius: 10px;
+      border-left: 4px solid transparent;
+      transition: border 0.3s ease;
+    }
+
+    .timeline-item:hover .content-box {
+      border-left: 4px solid #ffa500;
+    }
+
+    .timeline-item .step {
+      background: #00a8ff;
+      color: #fff;
+      font-weight: bold;
+      font-size: 1.8rem;
+      border-radius: 50%;
+      width: 50px;
+      height: 50px;
+      text-align: center;
+      line-height: 48px;
+      position: absolute;
+      left: 50%;
+      top: 30%;
+      transform: translateX(-50%) scale(0.7);
+      transition: all 0.4s ease;
+      z-index: 2;
+    }
+     .timeline-item.active .step{
+      background-color: #ffa500;
+      transform: translateX(-50%) scale(1.1);
+      box-shadow: 0 0 15px rgba(255, 165, 0, 0.6);
+     }
+    /* .timeline-item.active .step {
+      background-color: #ffa500;
+      transform: translateX(-50%) scale(1.1);
+      box-shadow: 0 0 15px rgba(255, 165, 0, 0.6);
+    } */
+
+    .timeline-item:nth-child(2) .step {
+      background: #00d67d;
+    }
+
+    .timeline-item:nth-child(3) .step {
+      background: #f9a826;
+    }
+
+    .timeline-item:nth-child(4) .step {
+      background: #dc3545;
+    }
+
+    .content-box h3 {
+      margin: 0 0 10px;
+      font-size: 1.3rem;
+      transition: color 0.3s;
+    }
+
+    .content-box p {
+      font-size: 1rem;
+      color: #555;
+    }
+
+    .content-box a {
+      color: #007bff;
+      font-weight: 500;
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+
+    .timeline-item:hover .content-box h3,
+    .timeline-item:hover .content-box a {
+      color: #ffa500;
+    }
+   
+
+    .timeline-item .content-box i {
+      margin-right: 8px;
+      transition: color 0.3s;
+    }
+
+    .timeline-item:hover .content-box i {
+      color: #ffa500;
+    }
+
+    @media (max-width: 768px) {
+      .timeline-item {
+        flex-direction: column !important;
+        align-items: center;
+      }
+
+      .timeline-item .content-box {
+        width: 90%;
+        text-align: center;
+      }
+
+      .timeline::before {
+        left: 24px;
+      }
+
+      .timeline-item .step {
+        left: 24px;
+        transform: translateX(0);
+      }
+
+      .timeline-item.active .step {
+        transform: scale(1.1);
+      }
+    }
+  </style>
+</head>
+<body>
+
+<section class="approach-section">
+  <h2>Our Approach</h2>
+  <p style="text-align: center;">Here’s how we define and handle our Learners</p>
+
+  <div class="timeline" id="timeline">
+    <!-- Item 1 -->
+    <div class="timeline-item">
+      <div class="step">01</div>
+      <div class="content-box">
+        <h3><i class="fas fa-code"></i> Web Designing & Development</h3>
+        <p>Expert web design and development services tailored to elevate your online presence.</p>
+        <a href="#">View Details →</a>
+      </div>
+    </div>
+
+    <!-- Item 2 -->
+    <div class="timeline-item">
+      <div class="step">02</div>
+      <div class="content-box">
+        <h3><i class="fas fa-shopping-cart"></i> Ecommerce Website Designing</h3>
+        <p>Professional eCommerce design services that drive sales with custom, responsive UI.</p>
+        <a href="#">View Details →</a>
+      </div>
+    </div>
+
+    <!-- Item 3 -->
+    <div class="timeline-item">
+      <div class="step">03</div>
+      <div class="content-box">
+        <h3><i class="fas fa-database"></i> ERP Development</h3>
+        <p>ERP solutions to streamline your operations and improve business efficiency.</p>
+        <a href="#">View Details →</a>
+      </div>
+    </div>
+
+    <!-- Item 4 -->
+    <div class="timeline-item">
+      <div class="step">04</div>
+      <div class="content-box">
+        <h3><i class="fas fa-rocket"></i> Digital Strategy</h3>
+        <p>Strategic planning and digital transformation tailored for your brand's goals.</p>
+        <a href="#">View Details →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  const timeline = document.getElementById("timeline");
+  const items = document.querySelectorAll('.timeline-item');
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('active');
+        timeline.classList.add('animate-line');
+      }
+    });
+  }, { threshold: 0.75 });
+
+  items.forEach(item => observer.observe(item));
+</script>
+
+</body>
+</html>

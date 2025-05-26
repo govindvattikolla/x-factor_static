@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    
   
 
 	
@@ -15,26 +16,35 @@
 	<link rel="stylesheet" href="./bootsrap.min.css">
   <!-- boxicons -->
    <!-- <link rel="stylesheet" href="./boxicons.min.css"> -->
-	
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
 
 </head>
 
 <body>
    <!-- Navbar -->
-  <header class="navbar">
-    <div class="logo">
-      <img src="./assets/XFactor main logo.jpg" alt="X-Factor Logo" /> <!-- Replace with your logo -->
-    </div>
+  <header class="navbar" id="home">
+  <div class="logo">
+    <img src="./assets/XFactor main logo.jpg" alt="X-Factor Logo" />
+  </div>
+
+  <div class="menu-toggle" id="menu-toggle">
+    <i class="fas fa-bars"></i>
+  </div>
+
+  <nav class="nav-links" id="nav-links">
     <ul>
-      <li><a href="#">Home</a></li>
-      <li><a href="#">About</a></li>
-      <li><a href="#">Programs</a></li>
-      <li><a href="#">Trainers</a></li>
-      <li><a href="#">Reviews</a></li>
-      <li><a href="#">Contact us</a></li>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#programs">Programs</a></li>
+      <!-- <li><a href="#">Trainers</a></li> -->
+      <li><a href="#reviews">Reviews</a></li>
+      <li><a href="#contactUS">Contact Us</a></li>
     </ul>
     <a href="#" class="register-btn">Register Now</a>
-  </header>
+  </nav>
+</header>
+
 
   <!-- Hero Section -->
  
@@ -47,7 +57,7 @@
 
   
   <!-- about section -->
-   <section class="about-section">
+   <section class="about-section" id="about">
     <div class="about-container">
       <div class="about-image">
         <img src="./assets/xfactor-about(rajesh).jpg" alt="Learning Session" />
@@ -67,143 +77,71 @@ We're here to guide you, every step of the way — because real learning begins 
        
         
          <p class="subtext">
-         Our expert trainers bring hands-on knowledge to help you succeed
+         Start Your Learning Journey with X-Factor
+
         </p>
         <div class="buttons">
-          <a href="#" class="btn-primary">Meet Our Trainers</a>
+          <a href="#programs" class="btn-primary">Explore Courses</a>
           
         </div>
       </div>
     </div>
   </section>
 
-  <!-- servvices -->
+  <!-- services -->
    
+<section class="approach-section" >
+  <h2>Our Approach</h2>
+  <p style="text-align: center;">Here’s how we define and handle our Learners</p>
 
-<div class="service-area pb-120 position-relative">
-	<div class="container">
-		<div class="row justify-content-center">
-			<div class="col-lg-7">
-				<div class="section-title section-title-style-two text-center title-anim" style="perspective: 400px;"><div style="display: block; text-align: center; position: relative; translate: none; rotate: none; scale: none; transform-origin: 371.5px 15px; transform: translate3d(0px, 0px, 0px); opacity: 1;"><span class="d-block" style="color:orange;margin-top: 2rem;">How it will be</span>
-        </div><div style="display: block; text-align: center; position: relative; translate: none; rotate: none; scale: none; transform-origin: 371.5px 30px; transform: translate3d(0px, 0px, 0px); opacity: 1;"><h2>Our Appraoch</h2></div>
-        <div style="display: block; text-align: center; position: relative; translate: none; rotate: none; scale: none; transform-origin: 371.5px 30px; transform: translate3d(0px, 0px, 0px); opacity: 1;">
-          <p>Here how we define and handle our Learners</p></div></div>
-			</div>
-		</div>
-		<div class="row justify-content-center mt-60">
-			<div class="col-lg-12 col-xl-11">
-				<ul class="service-list-wrap animation-content">
-					<li>
-						<span class="srv-1">01</span>
-						<div class="service-box  anim-item" style="translate: none; rotate: none; scale: none; opacity: 1; transform: translate(0px, 0px);">
-							<div class="service-icon">
-								<svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
-									<path d="M20.8334 35.3124H12.9376C5.91675 35.3124 4.16675 33.5624 4.16675 26.5416V14.0416C4.16675 7.02075 5.91675 5.27075 12.9376 5.27075H34.8751C41.8959 5.27075 43.6459 7.02075 43.6459 14.0416" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-									<path d="M20.8333 44.7292V35.3125" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-									<path d="M4.16675 26.9792H20.8334" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-									<path d="M14.0417 44.7292H20.8334" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-									<path d="M45.8334 26.6667V38.5625C45.8334 43.5 44.6042 44.7292 39.6667 44.7292H32.2709C27.3334 44.7292 26.1042 43.5 26.1042 38.5625V26.6667C26.1042 21.7292 27.3334 20.5 32.2709 20.5H39.6667C44.6042 20.5 45.8334 21.7292 45.8334 26.6667Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-									<path d="M35.926 38.0209H35.9447" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path>
-								</svg>
-							</div>
-							<div class="service-info">
-								<h2>Web Designing &amp; Development</h2>
-								<p>Expert web design and development services tailored to elevate your online presence. Responsive, innovative, and user-focused solutions for your business.</p>
-								<a class="common-btn style-three d-inline-block mt-3 link" href="https://digimediasolutions.in/web-designing-and-development.php">View Details <svg width="27" height="14" viewBox="0 0 27 14" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-									<path d="M0.217443 6.25H18.4827C18.6276 6.25 18.7001 6.30263 18.7001 6.40789V7.59211C18.7001 7.69737 18.6276 7.75 18.4827 7.75H0.217443C0.0724811 7.75 0 7.69737 0 7.59211V6.40789C0 6.30263 0.0724811 6.25 0.217443 6.25Z" fill="currentColor"></path>
-									<path d="M20.7002 12.2802L25.0469 7.93355C25.5602 7.42021 25.5602 6.58021 25.0469 6.06688L20.7002 1.72021" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
-									</svg>
-								</a>
-							</div>
-						</div>
-					</li>
-					<li>
-						<span class="srv-2 ">02</span>
-						<div class="service-box anim-item" style="translate: none; rotate: none; scale: none; opacity: 1; transform: translate(0px, 0px);">
-							<div class="service-icon">
-								<svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
-									<path d="M22.3958 46.875H27.6459C29.6459 46.875 30.9375 45.4584 30.5625 43.7292L29.7083 39.9585H20.3333L19.4792 43.7292C19.1042 45.3542 20.5208 46.875 22.3958 46.875Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-									<path d="M29.7083 39.9376L33.3125 36.7292C35.3333 34.9376 35.4167 33.6874 33.8125 31.6666L27.4583 23.6042C26.125 21.9167 23.9375 21.9167 22.6042 23.6042L16.25 31.6666C14.6458 33.6874 14.6458 35.0001 16.75 36.7292L20.3542 39.9376" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-									<path d="M25.0208 23.1667V28.4376" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-									<path d="M26.0834 10.4167H24.0001C22.8542 10.4167 21.9167 9.47925 21.9167 8.33342V6.25008C21.9167 5.10425 22.8542 4.16675 24.0001 4.16675H26.0834C27.2292 4.16675 28.1667 5.10425 28.1667 6.25008V8.33342C28.1667 9.47925 27.2292 10.4167 26.0834 10.4167Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-									<path d="M6.81258 29.5211H8.89591C10.0417 29.5211 10.9792 28.5836 10.9792 27.4378V25.3545C10.9792 24.2086 10.0417 23.271 8.89591 23.271H6.81258C5.66675 23.271 4.72925 24.2086 4.72925 25.3545V27.4378C4.72925 28.5836 5.66675 29.5211 6.81258 29.5211Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-									<path d="M43.1877 29.5211H41.1043C39.9585 29.5211 39.021 28.5836 39.021 27.4378V25.3545C39.021 24.2086 39.9585 23.271 41.1043 23.271H43.1877C44.3335 23.271 45.271 24.2086 45.271 25.3545V27.4378C45.271 28.5836 44.3335 29.5211 43.1877 29.5211Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-									<path d="M21.9167 7.41675C13.9792 8.35425 7.8125 15.0834 7.8125 23.2709" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-									<path d="M42.1876 23.2709C42.1876 15.1042 36.0626 8.39591 28.1667 7.41675" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-								</svg>
-							</div>
-							<div class="service-info">
-								<h2>Ecommerce Website Designing</h2>
-								<p>Professional eCommerce website design services that drive sales. Create a seamless shopping experience with custom, responsive, and user-friendly designs.</p>
-								<a class="common-btn style-three d-inline-block mt-3 link" href="https://digimediasolutions.in/ecommerce-website-designing.php">View Details <svg width="27" height="14" viewBox="0 0 27 14" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-									<path d="M0.217443 6.25H18.4827C18.6276 6.25 18.7001 6.30263 18.7001 6.40789V7.59211C18.7001 7.69737 18.6276 7.75 18.4827 7.75H0.217443C0.0724811 7.75 0 7.69737 0 7.59211V6.40789C0 6.30263 0.0724811 6.25 0.217443 6.25Z" fill="currentColor"></path>
-									<path d="M20.7002 12.2802L25.0469 7.93355C25.5602 7.42021 25.5602 6.58021 25.0469 6.06688L20.7002 1.72021" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
-									</svg>
-								</a>
-							</div>
-						</div>
-					</li>
-					<li>
-						<span class="srv-3">03</span>
-						<div class="service-box anim-item" style="translate: none; rotate: none; scale: none; opacity: 1; transform: translate(0px, 0px);">
-							<div class="service-icon">
-								<svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
-									<path d="M43.75 14.5834V35.4167C43.75 41.6667 40.625 45.8334 33.3333 45.8334H16.6667C9.375 45.8334 6.25 41.6667 6.25 35.4167V14.5834C6.25 8.33341 9.375 4.16675 16.6667 4.16675H33.3333C40.625 4.16675 43.75 8.33341 43.75 14.5834Z" stroke="currentColor" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
-									<path d="M33.8542 22.9167H16.1458C14.1458 22.9167 12.5 21.2709 12.5 19.2709V14.0626C12.5 12.0626 14.1458 10.4167 16.1458 10.4167H33.8542C35.8542 10.4167 37.5 12.0626 37.5 14.0626V19.2709C37.5 21.2709 35.8542 22.9167 33.8542 22.9167Z" stroke="currentColor" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
-									<path d="M21.4584 31.8335L16.6667 36.6251" stroke="currentColor" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
-									<path d="M16.7292 31.8958L21.5209 36.6874" stroke="currentColor" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
-									<path d="M34.3542 31.9375H34.396" stroke="currentColor" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
-									<path d="M30.1875 36.4582V36.4165" stroke="currentColor" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
-								</svg>
-							</div>
-							<div class="service-info">
-								<h2>ERP Development</h2>
-								<p>Comprehensive ERP development solutions to streamline your business processes. Custom-built, scalable, and efficient systems to enhance productivity and growth.</p>
-								<a class="common-btn style-three d-inline-block mt-3 link" href="https://digimediasolutions.in/erp-development.php">View Details <svg width="27" height="14" viewBox="0 0 27 14" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-									<path d="M0.217443 6.25H18.4827C18.6276 6.25 18.7001 6.30263 18.7001 6.40789V7.59211C18.7001 7.69737 18.6276 7.75 18.4827 7.75H0.217443C0.0724811 7.75 0 7.69737 0 7.59211V6.40789C0 6.30263 0.0724811 6.25 0.217443 6.25Z" fill="currentColor"></path>
-									<path d="M20.7002 12.2802L25.0469 7.93355C25.5602 7.42021 25.5602 6.58021 25.0469 6.06688L20.7002 1.72021" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
-									</svg>
-								</a>
-							</div>
-						</div>
-					</li>
-						<li>
-						<span class="srv-1">04</span>
-						<div class="service-box  anim-item" style="translate: none; rotate: none; scale: none; opacity: 1; transform: translate(0px, 0px);">
-							<div class="service-icon">
-								<svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
-									<path d="M20.8334 35.3124H12.9376C5.91675 35.3124 4.16675 33.5624 4.16675 26.5416V14.0416C4.16675 7.02075 5.91675 5.27075 12.9376 5.27075H34.8751C41.8959 5.27075 43.6459 7.02075 43.6459 14.0416" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-									<path d="M20.8333 44.7292V35.3125" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-									<path d="M4.16675 26.9792H20.8334" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-									<path d="M14.0417 44.7292H20.8334" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-									<path d="M45.8334 26.6667V38.5625C45.8334 43.5 44.6042 44.7292 39.6667 44.7292H32.2709C27.3334 44.7292 26.1042 43.5 26.1042 38.5625V26.6667C26.1042 21.7292 27.3334 20.5 32.2709 20.5H39.6667C44.6042 20.5 45.8334 21.7292 45.8334 26.6667Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-									<path d="M35.926 38.0209H35.9447" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path>
-								</svg>
-							</div>
-							<div class="service-info">
-								<h2>Web Designing &amp; Development</h2>
-								<p>Expert web design and development services tailored to elevate your online presence. Responsive, innovative, and user-focused solutions for your business.</p>
-								<a class="common-btn style-three d-inline-block mt-3 link" href="https://digimediasolutions.in/web-designing-and-development.php">View Details <svg width="27" height="14" viewBox="0 0 27 14" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-									<path d="M0.217443 6.25H18.4827C18.6276 6.25 18.7001 6.30263 18.7001 6.40789V7.59211C18.7001 7.69737 18.6276 7.75 18.4827 7.75H0.217443C0.0724811 7.75 0 7.69737 0 7.59211V6.40789C0 6.30263 0.0724811 6.25 0.217443 6.25Z" fill="currentColor"></path>
-									<path d="M20.7002 12.2802L25.0469 7.93355C25.5602 7.42021 25.5602 6.58021 25.0469 6.06688L20.7002 1.72021" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
-									</svg>
-								</a>
-							</div>
-						</div>
-					</li>
-					
-					
-					
-						
-				</ul>
-			</div>
-		</div>
-		
+  <div class="timeline" id="timeline">
+    <!-- Item 1 -->
+    <div class="timeline-item">
+      <div class="step">01</div>
+      <div class="content-box">
+        <h3><i class="fas fa-handshake"></i> Connect With Us</h3>
+        <p>Students reach out through our platform to begin their journey. This is where we get to know them and welcome them aboard.</p>
+        <a href="#">Enroll Now →</a>
+      </div>
+    </div>
 
+    <!-- Item 2 -->
+    <div class="timeline-item">
+      <div class="step">02</div>
+      <div class="content-box">
+        <h3><i class="fas fa-lightbulb"></i>  Understand You Better</h3>
+        <p>We take time to understand your current skills, goals, learning preferences, and the technologies you're interested in. This helps us assess what works best for you.</p>
+        <a href="#">Enroll Now →</a>
+      </div>
+    </div>
+
+    <!-- Item 3 -->
+    <div class="timeline-item">
+      <div class="step">03</div>
+      <div class="content-box">
+        <h3><i class="fas fa-database"></i> Build Your Personalized Curriculum</h3>
+        <p>Based on your needs, we design a custom curriculum tailored to your level and goals — whether you're a beginner or looking to upskill.</p>
+        <a href="#">Enroll Now →</a>
+      </div>
+    </div>
+
+    <!-- Item 4 -->
+    <div class="timeline-item">
+      <div class="step">04</div>
+      <div class="content-box">
+        <h3><i class="fas fa-rocket"></i> Begin Your Learning Journey</h3>
+        <p>With your roadmap ready, your personalized learning starts! We support you with expert guidance, relevant resources, and progress tracking throughout.</p>
+        <a href="#">Enroll Now →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+				
 <!-- Services End -->
 
   <!-- programs section -->
-   <section class="programs-section">
+   <section class="programs-section" id="programs">
     <div class="header">
       <h2><span class="highlight">OUR PROGRAMS</span></h2>
       <h1>Accelerate Your Career Growth</h1>
@@ -346,42 +284,14 @@ We're here to guide you, every step of the way — because real learning begins 
     <button class="Schedule">Schedule Free Consultation</button>
   </section>
 
-  <!-- our exprets -->
-   <section class="trainers-slider">
-    <h2>Meet Our Trainers</h2>
-    <div class="slider-container">
-      <div class="slider" id="slider">
-        <div class="slide">
-          <img src="trainer1.jpg" alt="Trainer 1" />
-          <h3>John Doe</h3>
-          <p class="profession">Fitness Coach</p>
-          <p>Specialized in strength training and weight loss programs.</p>
-        </div>
-        <div class="slide">
-          <img src="trainer2.jpg" alt="Trainer 2" />
-          <h3>Jane Smith</h3>
-          <p class="profession">Yoga Instructor</p>
-          <p>Expert in mindfulness, flexibility, and holistic well-being.</p>
-        </div>
-        <div class="slide">
-          <img src="trainer3.jpg" alt="Trainer 3" />
-          <h3>Mike Johnson</h3>
-          <p class="profession">Nutritionist</p>
-          <p>Guides personalized diet plans to achieve your health goals.</p>
-        </div>
-        <!-- Add more slides if needed -->
-      </div>
-      <button class="nav prev" onclick="prevSlide()">❮</button>
-      <button class="nav next" onclick="nextSlide()">❯</button>
-    </div>
-  </section>
+ 
 
 
   
 
 
 <!-- reviews -->
- <section class="reviews-section">
+ <section class="reviews-section" id="reviews">
   <h2><span>STUDENT REVIEWS</span><br>What Our Students Say</h2>
   <p class="subheading">Hear from professionals who have transformed their careers with our courses</p>
 
@@ -389,13 +299,13 @@ We're here to guide you, every step of the way — because real learning begins 
     <!-- Review 1 -->
     <div class="review-card">
       <div class="stars">★★★★★</div>
-      <p class="review-text">"This course completely transformed my approach to working with AI. The prompt engineering techniques I learned have made me significantly more productive at work."</p>
+      <p class="review-text">“These sessions boosted my confidence and communication! Huge thanks to Rajesh and team for making it so engaging and helpful.”</p>
       <div class="review-footer">
-        <img src="https://via.placeholder.com/40" alt="Michael Chen">
+        <img src="https://via.placeholder.com/40" alt="jagdesh">
         <div class="reviewer-info">
-          <strong>Michael Chen</strong><br>
-          <span>Software Developer</span><br>
-          <a href="#">Fundamentals of Prompts</a>
+          <strong>Jagadesh</strong><br>
+          <span>B.tech student</span><br>
+          <a href="#">Communication sessions</a>
         </div>
       </div>
       <p class="date">Posted on January 15, 2025</p>
@@ -403,13 +313,13 @@ We're here to guide you, every step of the way — because real learning begins 
 
     <!-- Review 2 -->
     <div class="review-card">
-      <div class="stars">★★★★★</div>
-      <p class="review-text">"The communication sessions helped me overcome my anxiety about public speaking. The instructor provided personalized feedback that addressed my specific challenges."</p>
+      <div class="stars">★★★★☆</div>
+      <p class="review-text">“An incredible 15-day journey! I improved my speaking skills, learned to connect better, and enjoyed every interactive session.”</p>
       <div class="review-footer">
-        <img src="https://via.placeholder.com/40" alt="Priya Sharma">
+        <img src="./assets/govind profile pic 2.jpg" alt="goivnd">
         <div class="reviewer-info">
-          <strong>Priya Sharma</strong><br>
-          <span>Marketing Manager</span><br>
+          <strong>Govind</strong><br>
+          <span>Software developer</span><br>
           <a href="#">Communication Sessions</a>
         </div>
       </div>
@@ -419,13 +329,13 @@ We're here to guide you, every step of the way — because real learning begins 
     <!-- Review 3 -->
     <div class="review-card">
       <div class="stars">★★★★★</div>
-      <p class="review-text">"After struggling for months to get interviews, I took this resume building course and everything changed. I received callbacks from 5 companies and landed my dream job!"</p>
+      <p class="review-text">“Rajesh's sessions on AI tools were amazing! His practical approach helped us solve real problems using prompts. Super inspiring!”</p>
       <div class="review-footer">
-        <img src="https://via.placeholder.com/40" alt="James Wilson">
+        <img src="https://via.placeholder.com/40" alt="blessy">
         <div class="reviewer-info">
-          <strong>James Wilson</strong><br>
-          <span>Recent Graduate</span><br>
-          <a href="#">Resume Building</a>
+          <strong>Blessy</strong><br>
+          <span>Content creater</span><br>
+          <a href="#">AI Prompting</a>
         </div>
       </div>
       <p class="date">Posted on February 3, 2025</p>
@@ -434,13 +344,13 @@ We're here to guide you, every step of the way — because real learning begins 
     <!-- Review 4 -->
     <div class="review-card">
       <div class="stars">★★★★☆</div>
-      <p class="review-text">"The LinkedIn Optimization course was a game-changer for my freelance business. I've seen a 200% increase in leads and raised my rates."</p>
+      <p class="review-text">“This 3-day workshop changed how I see AI! I learned it’s all about how you prompt.It was great experience Thanks, Rajesh, for making it click!”</p>
       <div class="review-footer">
-        <img src="https://via.placeholder.com/40" alt="Sophia Rodriguez">
+        <img src="https://via.placeholder.com/40" alt="pushpa">
         <div class="reviewer-info">
-          <strong>Sophia Rodriguez</strong><br>
-          <span>Freelance Consultant</span><br>
-          <a href="#">LinkedIn Optimization</a>
+          <strong>Pushpa</strong><br>
+          <span>Software Developer</span><br>
+          <a href="#">prompting Workshop</a>
         </div>
       </div>
       <p class="date">Posted on January 22, 2025</p>
@@ -450,7 +360,7 @@ We're here to guide you, every step of the way — because real learning begins 
 
 <!-- footer -->
  <!-- Metrics Section -->
-<section class="metrics">
+<section class="metrics" >
   <div class="metric"><strong>100+</strong><br><span>Satisfied Students</span></div>
   <div class="metric"><strong>4.8</strong><br><span>Average Rating</span></div>
   <div class="metric"><strong>92%</strong><br><span>Completion Rate</span></div>
@@ -458,7 +368,7 @@ We're here to guide you, every step of the way — because real learning begins 
 </section>
 
 <!-- Footer Section -->
-<footer class="footer">
+<footer class="footer" id="contactUS">
   <div class="footer-content">
     <!-- Logo and Description -->
     <div class="footer-col logo-col">
@@ -477,11 +387,11 @@ We're here to guide you, every step of the way — because real learning begins 
     <div class="footer-col">
       <h4>Quick Links</h4>
       <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">About Us</a></li>
-        <li><a href="#">Courses</a></li>
-        <li><a href="#">Blog</a></li>
-        <li><a href="#">Contact</a></li>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About Us</a></li>
+        <li><a href="#programs">Courses</a></li>
+        <li><a href="#reviews">Reviews</a></li>
+        <li><a href="#contactUs">Contact</a></li>
       </ul>
     </div>
 
