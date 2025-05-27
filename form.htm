@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>XFACTOR Registration</title>
+  <link rel="icon" href="./assets/XFactor main logo.jpg" type="image/png" />
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f4f4f4;
+      padding: 2rem;
+    }
+
+    .form-container {
+      background: #ffffff;
+      max-width: 500px;
+      margin: auto;
+      padding: 2rem;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    .form-container h2 {
+      text-align: center;
+      margin-bottom: 1.5rem;
+      color: #333;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 0.5rem;
+      font-weight: 600;
+    }
+
+    input, select {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 1.5rem;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      background-color: #f2f5f7ce;
+    }
+
+    button {
+      width: 100%;
+      background-color: #007bff;
+      color: white;
+      padding: 12px;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+      position: relative;
+    }
+
+    button.loading {
+      pointer-events: none;
+      opacity: 0.7;
+    }
+
+    button.loading::after {
+      content: "";
+      position: absolute;
+      right: 16px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 16px;
+      height: 16px;
+      border: 2px solid white;
+      border-top: 2px solid transparent;
+      border-radius: 50%;
+      animation: spin 0.6s linear infinite;
+    }
+
+    @keyframes spin {
+      to { transform: translateY(-50%) rotate(360deg); }
+    }
+
+    #thankYouMessage {
+      display: none;
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    #thankYouMessage h3 {
+      color: green;
+    }
+
+    #thankYouMessage button {
+      background-color: #007bff;
+      color: white;
+      padding: 10px 20px;
+      font-size: 15px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    #thankYouMessage button:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+
+<div class="form-container">
+  <h2>Student Registration</h2>
+  <form id="userForm" name="userForm">
+    <label for="name">Name</label>
+    <input type="text" name="Name" required placeholder="Enter Your Name Here" />
+
+    <label for="email">Email</label>
+    <input type="email" name="Email" required placeholder="Enter Your Email Id" />
+
+    <label for="mobile">Mobile Number</label>
+    <input type="tel" name="Mobile" required pattern="[0-9]{10}" placeholder="Enter 10 digit mobile number" />
+
+    <label for="profession">Profession</label>
+    <select name="profession" id="profession" required>
+      <option value="">-- Select Your Profession --</option>
+      <option value="student">Student</option>
+      <option value="employee">Employee</option>
+      <option value="businessman">Businessman</option>
+      <option value="others">Others</option>
+    </select>
+
+    <label for="course">Course</label>
+    <input type="text" name="course" required placeholder="Enter a course you are looking for" />
+
+    <button type="submit" id="submitBtn">
+      <span id="btnText">Submit</span>
+    </button>
+  </form>
+
+  <div id="thankYouMessage">
+    <h3>Thank you for registering!</h3>
+    <button onclick="window.location.href='./index.htm'">Go Back</button>
+  </div>
+</div>
+
+<script>
+  const scriptURL = "https://script.google.com/macros/s/AKfycbwc4t7ga95m1kvGjwSyZrLWcIuUY3Z0MIUoGksGsi31UfFaYEa3fr7ddMwp5Ky-3VfghA/exec";
+  
+  document.getElementById('userForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+
+    const form = e.target;
+    const submitBtn = document.getElementById('submitBtn');
+    const btnText = document.getElementById('btnText');
+
+    // Activate loading state
+    submitBtn.classList.add('loading');
+    btnText.textContent = 'Submitting...';
+
+    const formData = new FormData(form);
+
+    fetch(scriptURL, {
+      method: 'POST',
+      mode: 'no-cors',
+      body: formData
+    })
+    .then(() => {
+      form.reset();
+      form.style.display = 'none';
+      document.getElementById('thankYouMessage').style.display = 'block';
+    })
+    .catch(error => {
+      console.error('Error!', error.message);
+      alert('Something went wrong. Please try again.');
+    })
+    .finally(() => {
+      submitBtn.classList.remove('loading');
+      btnText.textContent = 'Submit';
+    });
+  });
+</script>
+
+</body>
+</html>

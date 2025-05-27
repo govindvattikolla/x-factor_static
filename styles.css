@@ -470,7 +470,7 @@ body {
 }
 .enroll {
   display: inline-block;
-  margin-top: 5px;
+  margin-top: 4rem;
   padding: 14px 20px;
   background-color: #007bff;
   border: #007bff;
@@ -485,6 +485,7 @@ body {
   width: 90%;
   margin-left: 1.5rem;
   margin-bottom: 1rem;
+  
 }
 
 .enroll:hover {
@@ -1302,4 +1303,60 @@ body {
         transform: scale(1.1);
       }
     }
+
+
+    /* recognised */
+ .recognised {
+  background-color: #f9f9f9;
+  padding: 40px 20px;
+  text-align: center;
+  overflow: hidden;
+}
+
+.recognised h2 {
+  font-size: 28px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 30px;
+}
+
+/* Scrolling container */
+.scroll-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  animation: alternateScroll 3s infinite alternate ease-in-out;
+}
+
+/* MSME image styles */
+.scroll-container img {
+  width: 18vw; /* 50% of viewport width */
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+  
+}
+
+/* Keyframes for alternate movement */
+@keyframes alternateScroll {
+  0% {
+    transform: translateX(-80px);
+  }
+  100% {
+    transform: translateX(80px); /* Adjust as needed for motion */
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+  .recognised h2 {
+    font-size: 22px;
+  }
+
+  .scroll-container img {
+    width: 80vw;
+  }
+}
+
+
 
